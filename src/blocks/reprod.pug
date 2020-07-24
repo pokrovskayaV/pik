@@ -1,0 +1,30 @@
+- const sliderItems = [ {src:"img/birth.jpg", name:'Явление Христа народу, 1636', autor:'Александр Иванов', size:'108 × 75 см, холст', price:'2 700 ₽', srcmin:"img/birth-min.jpg" }, {src:"img/venus.jpg", name:'Рождение Венеры, 1636', autor:'Никола Пуссен', size:'97 × 108 см, холст', price:'2 400 ₽', srcmin:"img/venus-min.jpg" },{src:"img/demon.jpg", name:'Шестикрылый серафим, 1837', autor:'Михаил Врубель', size:'131 × 155 см, холст', price:'4 100 ₽', srcmin:"img/demon-min.jpg" } ]
+
+.main__main-top.main-top._container
+  .main-top__content
+    div.main-top__info(vocab = "http://schema.org/" typeof = "LocalBusiness")
+      h1(property = "name") Репро дукцио
+      p.main-top__name(property = "description") Оффлайн-магазин репродукций шедевров мирового искусства
+      .main-top__contacts
+        p.main-top__address(property = "address" typeof = "PostalAddress") Санкт-Петербург, <br> ул. Адмирала Черокова, 18
+        .main-top__communication
+          a(class="main-top__tel" property = "telephone") +7 812 960-22-01
+          a(class="main-top__mail" href="mailto:shop@reproduct.io" property="email") shop@reproduct.io
+    .main-top__js-slider        
+      .main-top__js-slider-for.slider-for(vocab = "http://schema.org/" typeof = "ItemList")
+        for item in sliderItems
+          div(property = "itemListElement" typeof = "Product")
+            img(src=item.src alt=item.name property= "image")
+            .slider-for__description
+             .slider-for__picture
+               p(property="name")= item.name
+               span(property="author")= item.autor
+             .slider-for__price(property="offer" typeof="Offer")
+               p= item.size
+               span(property="schema:price")= item.price 
+      .main-top__js-slider-nav.slider-nav
+        for item in sliderItems
+         div
+           img(src=item.srcmin alt=name)
+
+

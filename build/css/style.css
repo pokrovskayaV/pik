@@ -1,0 +1,4 @@
+@import url("reprod.css");@import url("popular.css");@import url("form.css");@font-face{font-family:Roboto-Reg;src:url(../font/Roboto-Regular.ttf)}:root{--gray:#a3a3a3fa;--translucent-gray:#85858585;--darken-gray:#727272}body,html{padding:0;margin:0;-webkit-box-sizing:border-box;box-sizing:border-box;font-family:Roboto-Reg}._container{max-width:1000px;margin:0 auto}a,button{text-decoration:none;cursor:pointer}a,button,input,textarea{border:none;outline:none}
+@supports (-webkit-appearance:none){
+
+}

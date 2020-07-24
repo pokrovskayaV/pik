@@ -1,0 +1,131 @@
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../font/Roboto-Bold.ttf");
+}
+
+.main-top {
+  &__content {
+    margin: 20px 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__info {
+    margin: 0 5px;
+    min-width: 200px;
+    h1 {
+      font-size: 36px;
+      font-family: "Roboto-Bold";
+      margin: 0;
+      line-height: 30px;
+    }
+  }
+  &__name {
+    font-size: 13px;
+  }
+  &__contacts {
+    margin: 35px 0;
+    font-size: 12px;
+    color: var(--darken-gray);
+  }
+  &__communication {
+    display: flex;
+    flex-direction: column;
+    a {
+      color: inherit;
+      cursor: pointer;
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+  &__js-slider {
+    display: flex;
+    .slider-nav {
+      margin: 23px 5px;
+      cursor: pointer;
+      position: relative;
+      img {
+        border-radius: 2px;
+        margin: 5px 0;
+        width: 145px;
+        height: 103px;
+      }
+    }
+
+    .slick-active {
+      outline: none;
+      opacity: 0.6;
+    }
+
+    .slick-current {
+      opacity: 1;
+    }
+
+    .slick-arrow {
+      position: absolute;
+      top: 50%;
+      margin: 5px -5px 0 10px;
+      z-index: 2;
+      font-size: 0;
+      width: 30px;
+      height: 30px;
+      opacity: 0.8;
+    }
+
+    .slick-arrow.slick-prev {
+      left: 0;
+      background: url("../img/icons/arr-left.svg") 0 0 / 40% no-repeat;
+    }
+
+    .slick-arrow.slick-next {
+      right: 0;
+      background: url("../img/icons/arr-right.svg") 0 0 / 40% no-repeat;
+    }
+    .slick-disabled {
+      display: none !important;
+    }
+  }
+}
+
+.slider-for {
+  width: 560px;
+  height: 390px;
+  position: relative;
+  margin: 0 10px 0 40px;
+  div img {
+    width: 100%;
+    border-radius: 2px;
+  }
+  &__description {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(236, 236, 236);
+    font-size: 13px;
+    font-weight: normal;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.774);
+    z-index: 10;
+    width: 330px;
+    height: 45px;
+    padding: 0 10px;
+    p {
+      padding: 0;
+      margin: 5px 0;
+    }
+  }
+  &__picture {
+    span {
+      color: var(--gray);
+      font-size: 11px;
+    }
+  }
+  &__price {
+    color: var(--gray);
+    font-size: 11px;
+    span {
+      color: rgb(212, 153, 24);
+      font-size: 13px;
+    }
+  }
+}

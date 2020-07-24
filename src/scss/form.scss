@@ -1,0 +1,135 @@
+.connection-block {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 40px 0;
+  &__text {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+    padding: 0 10px;
+    max-width: 300px;
+    max-height: 215px;
+    h1 {
+      margin-bottom: 5px;
+    }
+    p {
+      font-size: 12px;
+      line-height: 16px;
+      color: var(--gray);
+      margin: 0;
+    }
+  }
+  &__footer {
+    margin-top: auto;
+    p,
+    a {
+      font-size: 11px;
+      color: var(--translucent-gray);
+    }
+    p {
+      padding: 8px 0;
+    }
+    a {
+      text-decoration: underline;
+      &:hover {
+        color: var(--gray);
+      }
+    }
+  }
+  &__forms {
+    position: relative;
+    &.hidden {
+      display: none;
+    }
+  }
+  &__form {
+    display: flex;
+    margin: 0 0 40px 0;
+    flex-direction: column;
+    min-width: 230px;
+    input::placeholder,
+    textarea::placeholder {
+      color: var(--gray);
+    }
+    .validate__error {
+      padding: 5px 0;
+      line-height: 12px;
+      position: absolute;
+      color: rgba(184, 23, 23, 0.884);
+      font-size: 10px;
+      width: 150px;
+      left: 240px;
+    }
+    .error-color {
+      background-color: rgb(238, 186, 186);
+    }
+  }
+
+  &__success {
+    display: none;
+    width: 230px;
+    height: 170px;
+    color: rgb(17, 156, 17);
+    h2 {
+      transform: rotate(-5deg);
+    }
+    p {
+      font-size: 12px;
+      padding: 0 5px;
+    }
+  }
+
+  &__success.show {
+    display: block;
+  }
+
+  &__email,
+  &__textarea,
+  &__btn {
+    padding: 10px;
+    border-radius: 2px;
+  }
+  &__textarea {
+    margin: 15px 0 0 0;
+    height: 115px;
+    font-size: 13px;
+  }
+  &__btn {
+    position: absolute;
+    width: 155px;
+    right: 0;
+    bottom: -5px;
+    background-color: rgb(0, 0, 255);
+    outline: none;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 12px;
+    &:hover {
+      bottom: -6px;
+      box-shadow: 0 0 5px 1px rgb(62, 98, 216);
+    }
+  }
+}
+
+.white-popup-block {
+  font-size: 13px;
+  position: relative;
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
+  h2 {
+    font-family: "Roboto-Bold";
+  }
+  ul,
+  span {
+    list-style: none;
+    padding: 0 15px;
+  }
+  .mfp-close {
+    background: url("../img/icons/close.svg") 12px 7px / 45% no-repeat;
+    background-color: #fff;
+  }
+}
