@@ -9,8 +9,10 @@
   .connection-block__forms
     form(class="connection-block__form" metod="post")
       input(class="connection-block__email" id="email" type="text"  name="e-mail" placeholder="Эл.почта")
+      label(for="email") Email
       span.validate__error
-      textarea(class="connection-block__textarea" name="text" placeholder="Сообщение")
+      textarea(class="connection-block__textarea" id="textarea" name="text" placeholder="Сообщение")
+      label(for="textarea") Сообщение
       input(class="connection-block__btn" type="submit" value="Отправить сообщение")
   .connection-block__success 
     h2 Отправлено

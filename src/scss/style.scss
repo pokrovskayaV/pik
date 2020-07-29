@@ -3,8 +3,11 @@
 @import url("form.css");
 
 @font-face {
+  font-display: swap;
   font-family: "Roboto-Reg";
-  src: url("../font/Roboto-Regular.ttf");
+  src: local("Roboto-Regular"),
+    url("../font/Roboto-Regular.woff2") format("woff2"),
+    url("../font/Roboto-Regular.woff") format("woff");
 }
 
 :root {

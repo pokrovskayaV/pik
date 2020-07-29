@@ -1,12 +1,16 @@
+doctype html
 html(lang="ru")
   head
     meta(charset="utf-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(name="viewport" content="width=1010")
+    meta(name="description" content="Оффлайн-магазин репродукций шедевров мирового искусства")
     title Репродукцио
     link(rel="stylesheet" href="/css/style.css" type="text/css")
     link(rel="icon" href="img/icons/favicon.png")
     link(rel="stylesheet" type="text/css" href="/styles/slick.css")
     link(rel="stylesheet" type="text/css" href="/styles/magnific-popup.css")
+    link(rel="preload" href="font/Roboto-Regular.woff2" as="font" crossorigin)
+    link(rel="preload" href="font/Roboto-Bold.woff2" as="font" crossorigin)
   body
     main
       include blocks/reprod.pug

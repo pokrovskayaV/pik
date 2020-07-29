@@ -1,7 +1,11 @@
 @font-face {
+  font-display: swap;
   font-family: "Roboto-Bold";
-  src: url("../font/Roboto-Bold.ttf");
+  src: local('Roboto-Bold'),
+  url("../font/Roboto-Bold.woff2") format('woff2'),
+  url("../font/Roboto-Bold.woff") format('woff');
 }
+
 
 .main-bottom {
   background-color: rgb(0, 0, 0);
@@ -24,9 +28,11 @@
   }
   &__js-slider {
     margin: 0 30px 60px 0;
+    img {
+      cursor: default !important;
+    }
   }
   &__girl {
-    cursor: default !important;
     width: 170px;
     box-shadow: 0 0 40px 5px rgba(63, 63, 202, 0.445);
   }

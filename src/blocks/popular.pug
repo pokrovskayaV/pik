@@ -9,7 +9,7 @@
       .main-bottom__slider.multiple-items(vocab = "http://schema.org/" typeof = "ItemList")
         for item in popularItems
           div(property = "itemListElement" typeof = "Product")
-            img(class=`main-bottom__${item.class}` src=item.src alt=item.name property = "image")
+            img(class=`main-bottom__${item.class}` class="js-lazy" data-src=item.src src="img/fon.jpg" alt=item.name property = "image")
             .multiple-items__description
              .multiple-items__picture
                p(property="name")= item.name
@@ -18,4 +18,4 @@
                p= item.size
                span(property="schema:price")= item.price
     
-    include form.pug  
+    include form.pug

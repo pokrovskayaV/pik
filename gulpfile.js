@@ -36,13 +36,14 @@ let { watch, src, dest, parallel, series } = require("gulp"),
   group_media = require("gulp-group-css-media-queries"),
   pug = require("gulp-pug"),
   imagemin = require("gulp-imagemin"),
-  webp = require("gulp-webp"),
-  webpcss = require("gulp-webp-css"),
   webpack = require("webpack-stream"),
-  plumber = require("gulp-plumber");
+  plumber = require("gulp-plumber"),
+  ttf2woff = require("gulp-ttf2woff"),
+  ttf2woff2 = require("gulp-ttf2woff2");
 
 function buildPages() {
-  return src('src/*.pug')
+  return src("src/*.pug")
+    .pipe(plumber())
     .pipe(pug())
     .pipe(dest(path.build.html));
 }
@@ -58,31 +59,18 @@ function buildStyles() {
         cascade: true
       })
     )
-    .pipe(webpcss())
     .pipe(dest(path.build.css));
 }
 
 function buildScripts() {
-  return src('src/js/index.js')
-  .pipe(webpack({ output: { filename: 'bundle.js' } }))
-  .pipe(dest(path.build.js));
-}
-
-function buildLibraryScripts() {
-  return src('src/js/library/*.js')
-  .pipe(dest('build/js/library'));
+  return src("src/js/index.js")
+    .pipe(webpack({ output: { filename: "bundle.js" } }))
+    .pipe(dest(path.build.js));
 }
 
 
 function buildImages() {
   return src(path.src.img)
-    .pipe(
-      webp({
-        quality: 70
-      })
-    )
-    .pipe(dest(path.build.img))
-    .pipe(src(path.src.img))
     .pipe(
       imagemin({
         interlaced: true,
@@ -93,6 +81,11 @@ function buildImages() {
     )
     .pipe(dest(path.build.img));
 }
+
+function buildLibraryScripts() {
+  return src("src/js/library/*.js").pipe(dest("build/js/library"));
+}
+
 
 function buildLibraryStyles() {
   return src("src/styles/*.css").pipe(dest("build/styles/"));
@@ -110,7 +103,12 @@ function devServer(cb) {
 }
 
 function buildFonts() {
-  return src(path.src.fonts).pipe(dest(path.build.fonts));
+  src(path.src.fonts)
+    .pipe(ttf2woff())
+    .pipe(dest(path.build.fonts));
+  return src(path.src.fonts)
+    .pipe(ttf2woff2())
+    .pipe(dest(path.build.fonts));
 }
 
 function clearBuild() {

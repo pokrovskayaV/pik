@@ -1,6 +1,9 @@
 @font-face {
+  font-display: swap;
   font-family: "Roboto-Bold";
-  src: url("../font/Roboto-Bold.ttf");
+  src: local('Roboto-Bold'),
+  url("../font/Roboto-Bold.woff2") format('woff2'),
+  url("../font/Roboto-Bold.woff") format('woff');
 }
 
 .main-top {
@@ -63,7 +66,7 @@
 
     .slick-arrow {
       position: absolute;
-      top: 50%;
+      top: 45%;
       margin: 5px -5px 0 10px;
       z-index: 2;
       font-size: 0;
@@ -88,12 +91,17 @@
 }
 
 .slider-for {
-  width: 560px;
-  height: 390px;
   position: relative;
-  margin: 0 10px 0 40px;
+     width: 560px;
+     margin: 0 10px 0 40px;
+  .slick-track {
+   height: 390px;
+  
+  }
+
   div img {
-    width: 100%;
+    width: 560px;
+    height: auto;
     border-radius: 2px;
   }
   &__description {
