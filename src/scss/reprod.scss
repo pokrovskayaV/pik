@@ -92,16 +92,14 @@
 
 .slider-for {
   position: relative;
-     width: 560px;
-     margin: 0 10px 0 40px;
+  width: 560px;
+  height: 390px;
+  margin: 0 10px 0 40px;
   .slick-track {
    height: 390px;
-  
   }
-
   div img {
     width: 560px;
-    height: auto;
     border-radius: 2px;
   }
   &__description {
