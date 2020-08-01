@@ -11,7 +11,7 @@
           a(class="main-top__tel" property = "telephone") +7 812 960-22-01
           a(class="main-top__mail" href="mailto:shop@reproduct.io" property="email") shop@reproduct.io
     .main-top__js-slider        
-      .main-top__js-slider-for.slider-for(vocab = "http://schema.org/" typeof = "ItemList")
+      .main-top__slider-for.js__slider-for(vocab = "http://schema.org/" typeof = "ItemList")
         for item in sliderItems
           div(property = "itemListElement" typeof = "Product")
             img(class="js-lazy" data-src=item.src src="img/fon.jpg" alt=item.name property= "image")
@@ -22,7 +22,7 @@
              .slider-for__price(property="offer" typeof="Offer")
                p= item.size
                span(property="schema:price")= item.price 
-      .main-top__js-slider-nav.slider-nav
+      .main-top__slider-nav.js__slider-nav
         for item in sliderItems
          div
            img(class="js-lazy" data-src=item.srcmin src="img/fon.jpg" alt=item.name)

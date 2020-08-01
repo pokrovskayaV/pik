@@ -1,34 +1,34 @@
 //main-top
-function initSlidersTop() {
-  $(".slider-for").slick({
+let initSlidersTop = () => {
+  $(".js__slider-for").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
     fade: true,
     infinite: false,
-    asNavFor: ".slider-nav"
+    asNavFor: ".js__slider-nav"
   });
-  $(".slider-nav").slick({
+  $(".js__slider-nav").slick({
     slidesToShow: 3,
     slidesToScroll: 3,
-    asNavFor: ".slider-for",
+    asNavFor: ".js__slider-for",
     dots: false,
     focusOnSelect: true,
     infinite: false,
     vertical: true
   });
-}
+};
 
 //main-bottom
-function initSliderBottom() {
-  $(".multiple-items").slick({
+let initSliderBottom = () => {
+  $(".js__multiple-slider").slick({
     infinite: true,
     slidesToShow: 3,
     variableWidth: true,
     slidesToScroll: 1,
     arrows: true
   });
-}
+};
 
 export default function initSliders() {
   initSlidersTop();

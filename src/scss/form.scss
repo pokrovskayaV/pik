@@ -55,18 +55,24 @@
     textarea::placeholder {
       color: var(--gray);
     }
-    .validate__error {
-      padding: 5px 0;
-      line-height: 12px;
-      position: absolute;
-      color: rgba(184, 23, 23, 0.884);
-      font-size: 10px;
-      width: 150px;
-      left: 240px;
-    }
+
     .error-color {
       background-color: rgb(238, 186, 186);
     }
+  }
+
+  &__error-message {
+    padding: 5px 0;
+    line-height: 12px;
+    position: absolute;
+    color: rgba(184, 23, 23, 0.884);
+    font-size: 10px;
+    width: 150px;
+    left: 240px;
+    display: none;
+     &.show {
+       display: block;
+     }
   }
 
   &__success {

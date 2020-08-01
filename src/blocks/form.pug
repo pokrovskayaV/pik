@@ -5,16 +5,16 @@
     p или отправьте письмо на shop@reproduct.io
     .connection-block__footer
        p Репродукцио, 2019
-       a(class="connection-block__popap" href="#rules") Правила обработки персональных данных
-  .connection-block__forms
-    form(class="connection-block__form" metod="post")
-      input(class="connection-block__email" id="email" type="text"  name="e-mail" placeholder="Эл.почта")
+       a(class="connection-block__popap js__popap" href="#rules") Правила обработки персональных данных
+  .connection-block__forms.js__form-block
+    form(class="connection-block__form js__form" metod="post")
+      input(class="connection-block__email js__email" id="email" type="text"  name="e-mail" placeholder="Эл.почта")
       label(for="email") Email
-      span.validate__error
+      span.connection-block__error-message.js__error-message Введите почту в формате xxx@xxx.xxx
       textarea(class="connection-block__textarea" id="textarea" name="text" placeholder="Сообщение")
       label(for="textarea") Сообщение
       input(class="connection-block__btn" type="submit" value="Отправить сообщение")
-  .connection-block__success 
+  .connection-block__success.js__success-message 
     h2 Отправлено
     p Мы ответим вам на почту в течение нескольких рабочих дней
     

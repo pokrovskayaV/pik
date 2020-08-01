@@ -5,16 +5,16 @@
     .main-bottom__title
       h1 Популярное
       p Нестареющая классика и бестселлеры.
-    .main-bottom__js-slider
-      .main-bottom__slider.multiple-items(vocab = "http://schema.org/" typeof = "ItemList")
+    .main-bottom__slider
+      .main-bottom__multiple-slider.js__multiple-slider(vocab = "http://schema.org/" typeof = "ItemList")
         for item in popularItems
-          div(property = "itemListElement" typeof = "Product")
+          div(class="main-bottom__items items__block" property = "itemListElement" typeof = "Product")
             img(class=`main-bottom__${item.class}` class="js-lazy" data-src=item.src src="img/fon.jpg" alt=item.name property = "image")
-            .multiple-items__description
-             .multiple-items__picture
+            .items__block__description
+             .items__block__picture
                p(property="name")= item.name
                span(property="author")= item.autor
-             .multiple-items__price(property="offer" typeof="Offer")
+             .items__block__price(property="offer" typeof="Offer")
                p= item.size
                span(property="schema:price")= item.price
     

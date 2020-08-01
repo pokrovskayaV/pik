@@ -4,7 +4,6 @@ import initValid from "./parts/form";
 import storage from "./parts/storage";
 import lazy from "./parts/lazyLoad";
 
-
 $(document).ready(() => {
   lazy();
   initPopup();
