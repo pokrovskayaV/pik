@@ -66,12 +66,10 @@
       height: 100%;
       object-fit: cover;
     }
-    @media (min-width: 860px) {
       &:hover {
       .projects__info {
          transform: translateY(0); 
       }
-    }
     } 
     @media (max-width: 860px) {
       height: 213px;

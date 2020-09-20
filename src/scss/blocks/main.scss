@@ -70,7 +70,7 @@
       background-color: rgba(196, 196, 196, 0.3);
     }
    }
-   @media (max-width: 424px) {
+   @media (max-width: 474px) {
     padding-top: 95px;
   }
   @media (max-width: 330px) {
@@ -88,7 +88,7 @@
       margin-bottom: 30px;
       margin-top: 55px;
     }
-    @media (max-width: 424px) {
+    @media (max-width: 474px) {
       padding-top: 70px;
       margin-top: 0;
       margin-bottom: 0;
@@ -101,7 +101,7 @@
   .partner {
     position: relative;
     margin-left: 70px;
-    @media (max-width: 424px) {
+    @media (max-width: 474px) {
       opacity: 0;
       visibility: hidden;
     }
@@ -119,7 +119,7 @@
         margin-left: 0;
         align-self: flex-end;
       } 
-      @media (max-width: 424px) {
+      @media (max-width: 474px) {
        display: none;
       }
 
@@ -278,7 +278,7 @@
       margin-right: -53px;
       height: 178px;
     }
-    @media (max-width:424px) {
+    @media (max-width:474px) {
       min-width: 101vw;
       overflow-x: scroll;
       overflow-y: hidden;

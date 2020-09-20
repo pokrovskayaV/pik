@@ -16,7 +16,7 @@
       height:auto;
       position: relative;
      }
-     @media (max-width: 424px) {
+     @media (max-width: 474px) {
       padding-top: 15px;
     }
   }
@@ -116,7 +116,7 @@
       width: 90vw;
       justify-content: start;
       }
-      @media (max-width: 424px) {
+      @media (max-width: 474px) {
         flex-direction: column;
         justify-content: flex-start;
       }
@@ -331,7 +331,7 @@
  @media (max-width: 769px) {
   max-width: 200px;
 }
-@media (max-width: 424px) {
+@media (max-width: 474px) {
   max-width: 90vw;
   margin-bottom: 20px;
 }

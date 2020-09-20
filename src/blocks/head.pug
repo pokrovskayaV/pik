@@ -1,3 +1,4 @@
+- const widths = [ {value:"1600px" }, {value:"1260px" }, {value:"1024px" }, { value:"860px" }, { value:"769px" }, {value:"640px" }, {value:"474px" }, {value:"330px" }]
 
 head
     meta(charset="utf-8")
@@ -5,6 +6,8 @@ head
     meta(itemprop="description" name="description" content="Инженерная компания полного цикла")
     title(itemprop="headline") ООО ПиК | Инженерная компания полного цикла
     link(rel="stylesheet" href="/css/style.css" type="text/css")
+    for width in widths
+      link(media=`(max-width:${width.value})` href="/css/style.css" rel="stylesheet" type="text/css")
     //link(rel="icon" href="img/icons/favicon.svg")
     link(rel="stylesheet" type="text/css" href="/css/lib/fullPage.css")
     link(rel="stylesheet" type="text/css" href="/css/lib/slick.css")
