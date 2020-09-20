@@ -1,21 +1,17 @@
 doctype html
 html(lang="ru")
-  head
-    meta(charset="utf-8")
-    meta(name="viewport" content="width=1000")
-    meta(name="description" content="Оффлайн-магазин репродукций шедевров мирового искусства")
-    title Репродукцио
-    link(rel="stylesheet" href="/css/style.css" type="text/css")
-    link(rel="icon" href="img/icons/favicon.png")
-    link(rel="stylesheet" type="text/css" href="/styles/slick.css")
-    link(rel="stylesheet" type="text/css" href="/styles/magnific-popup.css")
-    link(rel="preload" href="font/Roboto-Regular.woff2" as="font" crossorigin)
-    link(rel="preload" href="font/Roboto-Bold.woff2" as="font" crossorigin)
+  include blocks/head.pug
   body
-    main
-      include blocks/reprod.pug
-      include blocks/popular.pug
-    script(type="text/javascript" src="js/library/jquery-3.5.1.slim.min.js")
-    script(type="text/javascript" src="js/library/slick.min.js")
-    script(type="text/javascript" src="js/library/magnific.js")
-    script(type="text/javascript" src="js/bundle.js")
+    .wrapper
+      .fixed-block
+        include blocks/header.pug
+        include blocks/aside.pug
+      .fullpage
+        include blocks/main.pug
+        include blocks/unity.pug
+        include blocks/services.pug
+        include blocks/projects.pug
+        include blocks/experience.pug
+        include blocks/energo.pug
+        include blocks/contacts.pug
+    include blocks/scripts.pug

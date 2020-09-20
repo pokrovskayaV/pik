@@ -1,5 +1,5 @@
 export default function initPopup() {
-  $(".js__popap").magnificPopup({
+  $(".menu__popap").magnificPopup({
     type: "inline",
     closeOnBgClick: true
   });

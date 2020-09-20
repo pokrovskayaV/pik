@@ -1,0 +1,25 @@
+- const services = [ {src:"../img/Conditioning.jpg", name:'Кондиционирование', class:'conditioning', number:'01'},{src:"../img/Heating.jpg", name:'Отопление', class:'heating', number:'02'}, {src:"../img/Ventilation.jpg", name:'Вентиляция', class:'ventilation', number:'03'}, {src:"../img/water-supply.jpg", name:'Внутреннее водоснабжение', class:'water', number:'04'}]
+
+
+.services.section.fp-auto-height-responsive
+  .services__bg.bg
+    img(src="../img/services-bg.jpg" alt="")
+  .services__logo.logo
+      img(src="../img/logo-white.png" alt="Логотип ПИК")
+  
+  .services__content
+    .services__text-block.text-block
+      h1.text-block__title Услуги
+      p.text-block__text В 2019 году «СК ПИК» объединилась с проектной компанией «Новый Проект», став единым подрядчиком выполняющим полный цикл услуг для строительства и реконструкции зданий.
+    for service in services
+      .services__block(class=`services__${service.class}`)
+        .services__number=service.number
+        img.services__img(src=service.src alt=service.name)
+        a(href="#").services__title=service.name
+        a.services__btn(href="#") Подробнее
+          span.services__arrow
+  .services__footer.footer.all-link
+      a(href="#").all-link__link
+        .all-link__text
+          p Все услуги
+          span

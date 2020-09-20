@@ -1,0 +1,45 @@
+mixin project(options={})
+ - const {title, text} = options
+  .projects__info
+    .projects__info-block
+      h3.projects__title=title
+      p.projects__text=text
+    a(href="#").projects__btn
+      span.projects__btn-img
+      span.projects__btn-arrow
+
+.projects.section._white
+  .projects__bg.bg
+    img(src="../img/projects-bg.jpg", alt="")
+  .projects__logo.logo
+      img(src="../img/logo-black.png" alt="Логотип ПИК")
+  .projects__content
+    .projects__text-block.text-block
+      h1.text-block__title Проекты
+      p.text-block__text В 2019 году «СК ПИК» объединилась с проектной компанией «Новый Проект», став единым подрядчиком выполняющим   полный цикл услуг для строительства и реконструкции зданий.
+    .projects__column
+      .projects__item
+        img(src="../img/proj-1.jpg" alt="")
+        +project({title:'Жилой комплекс "Золотая панда"', text:' Вентиляция, отопление и пожаротушение'})
+      .projects__item
+        img(src="../img/proj-4.jpg" alt="")
+        +project({title:'Жилой комплекс "Золотая панда"', text:' Вентиляция, отопление и пожаротушение'})
+    .projects__column  
+      .projects__item
+        img(src="../img/proj-2.jpg" alt="")
+        +project({title:'Жилой комплекс "Золотая панда"', text:' Вентиляция, отопление и пожаротушение'})
+      .projects__item
+        img(src="../img/proj-5.jpg" alt="")
+        +project({title:'Жилой комплекс "Золотая панда"', text:' Вентиляция, отопление и пожаротушение'})
+    .projects__column 
+      .projects__item
+        img(src="../img/proj-3.jpg" alt="")
+        +project({title:'Жилой комплекс "Золотая панда"', text:' Вентиляция, отопление и пожаротушение'})
+      .projects__item
+        img(src="../img/proj-6.jpg" alt="")
+        +project({title:'Жилой комплекс "Золотая панда"', text:' Вентиляция, отопление и пожаротушение'})
+  .projects__footer.footer.all-link._black
+      a(href="#").all-link__link
+        .all-link__text
+          p Все проекты
+          span

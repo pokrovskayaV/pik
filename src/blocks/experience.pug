@@ -1,0 +1,35 @@
+mixin bg
+  img(src="../img/exp-bg.jpg", alt="", srcset="")
+
+
+- const logos = [ {src:"logo-otkr", alt:'Банк Открытие'},{src:"logo-mts", alt:'МТС Банк'},{src:"logo-vtb", alt:'ВТБ'},{src:"logo-sber", alt:'Сбербанк'},{src:"logo-burger", alt:'Black Star Burger'},{src:"logo-voentorg", alt:'Военторг'},{src:"logo-vodokanal", alt:'Водоканал'},{src:"logo-shokolad", alt:'Шоколадница'},{src:"logo-vodokanal", alt:'Водоканал'},{src:"logo-sber", alt:'Сбербанк'},{src:"logo-otkr", alt:'Банк Открытие'},{src:"logo-vtb", alt:'ВТБ'}]
+
+mixin item
+  .experience__partner-item.item
+    img(src="../img/exp-item.jpg", alt="", srcset="")
+    .item__info
+      span.item__name ПАО “СБЕРБАНК”
+      p.item__title Спортивный детский лагерь
+      span.item__address Камчатский край, г. Петропавловск-Камчатский
+
+
+.experience.section.fp-auto-height-responsive
+  div(class="slider slider-x")
+    - for (var x = 0; x < 12; x++)
+      +bg
+  .experience__logo.logo
+    img(src="../img/logo-white.png" alt="Логотип ПИК")
+  .experience__container
+    .experience__content
+      .experience__top-content
+        .experience__text-block.text-block
+          h1.text-block__title Наш опыт сотрудничества
+          p.text-block__text Мы создаем проекты для лидирующих компаний по Дальнему Востоку во всех областях деятельности,     включая государственные учреждения, банки, торговые центры и отдельные специализированные предприятия.
+      .experience__bottom-content(class="slider slider-nav")
+        for logo in logos 
+          span
+            img(src=`../../img/${logo.src}.png`, alt=logo.alt)
+    .experience__right-content(data-da="experience__content,1,769")
+      div(class="slider slider-for")
+        - for (var x = 0; x < 12; x++)
+          +item

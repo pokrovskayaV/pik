@@ -1,0 +1,28 @@
+.contacts.section.fp-auto-height-responsive
+  .contacts__bg.bg
+    img(src="../img/contacts-bg.jpg", alt="")
+  .contacts__logo.logo
+    img(src="../img/logo-white.png" alt="Логотип ПИК")
+  .contacts__content
+    .contacts__left-content
+      .contacts__text-block.text-block
+        h1.text-block__title Желаете обсудить проект?
+      form(action="", method="get")
+        input(type="text" placeholder="Ваше имя")
+        input(type="email", name="" placeholder="E-mail" required)
+        textarea(name="" rows="5" placeholder="Ваше сообщение")
+        button(type="submit") Оставить заявку
+    .contacts__right-content
+      .contacts__map
+        img(src="../img/map.jpg")
+      .contacts__info
+        .contacts__tel
+          p +7 4212 12-34-56
+          span Главный офис
+        .contacts__address
+          p.contacts__city г. Хабаровск, ул. Тихоокеанская, 47 в3
+          p.contacts__email info@pik-dv.ru
+  .contacts__footer.footer
+    .footer__info
+      p Дизайн и разработка
+      p © Все права защищены. ООО “СК ПиК” 2019-2020
