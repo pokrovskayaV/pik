@@ -61,7 +61,6 @@ function buildPages() {
 
 function buildStyles() {
   return src(path.src.scss)
-    .pipe(criticalCss())
     .pipe(scss())
     .pipe(group_media())
     .pipe(cssnano())

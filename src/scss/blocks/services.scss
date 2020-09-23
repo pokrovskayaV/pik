@@ -16,19 +16,13 @@
      max-height: 100%;
      }
      @media (max-width: 769px) {
-      margin: 0 0 0 0;
-      padding-top: 0px;
+      margin: 0;
+      padding-top: 0;
       flex-direction: column;
       align-items: flex-start;
       height:auto;
       position: relative;
      }
-     @media (max-width: 474px) {
-      padding-top: 5px;
-    }
-    @media (max-width: 330px) {
-      padding-top: 15px;
-    }
        &:hover {
     .services__title, .services__number, .services__img {
     opacity: 0.4;
@@ -233,10 +227,11 @@
      display: none;
      @media (max-width:769px) {
       display: block;
-      margin: 0 52px 0 18px;
+      margin: 40px 52px 20px 18px;
       max-width: 500px;
       .text-block__text {
         max-width: 520px;
+        color: #737373;
       }
   }
 } 

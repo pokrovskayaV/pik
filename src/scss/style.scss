@@ -39,6 +39,7 @@ body {
  height: 100%;
  display: flex;
  flex-direction: column;
+ overflow: hidden;
 }
 
 ._container {
@@ -50,6 +51,7 @@ body {
   max-width: 1920px;
   height: 100vh;
   overflow: hidden;
+  position: relative;
   &._white {
     .text-block__title {
       color: #000;
@@ -59,7 +61,19 @@ body {
   }
   }
   @media (max-width: 769px) {
-    height: auto !important;
+    height: auto !important;   
+  }
+}
+
+.line {
+  @media (max-width: 769px) {
+   width: 100vw;
+   height: 40px;
+   background-color: #F3F3F3;
+   &._gray {
+    background-color: #252525;
+    border-bottom: 1px solid #c4c4c430;
+   }
   }
 }
 

@@ -1,4 +1,4 @@
-.contacts.section.fp-auto-height-responsive
+.contacts.section.fp-auto-height-responsive#7
   .contacts__bg.bg
     img(src="../img/contacts-bg.jpg", alt="")
   .contacts__logo.logo
@@ -10,7 +10,7 @@
       form(action="", method="get")
         input(type="text" placeholder="Ваше имя")
         input(type="email", name="" placeholder="E-mail" required)
-        textarea(name="" rows="5" placeholder="Ваше сообщение")
+        textarea(name="" placeholder="Ваше сообщение")
         button(type="submit") Оставить заявку
     .contacts__right-content
       .contacts__map
@@ -20,9 +20,14 @@
           p +7 4212 12-34-56
           span Главный офис
         .contacts__address
-          p.contacts__city г. Хабаровск, ул. Тихоокеанская, 47 в3
-          p.contacts__email info@pik-dv.ru
+          .contacts__city 
+            span
+            p г. Хабаровск, ул. Тихоокеанская, 47 в3
+          .contacts__email 
+            span
+            p info@pik-dv.ru
+  .line._gray
   .contacts__footer.footer
     .footer__info
-      p Дизайн и разработка
+      p Дизайн и разработка - Gold Panda
       p © Все права защищены. ООО “СК ПиК” 2019-2020

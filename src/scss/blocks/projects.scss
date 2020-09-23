@@ -32,15 +32,16 @@
        @media (max-width: 769px) {
         height: auto;
         margin: 0 52px 0 18px;
-        padding-top: 0px;
+        padding-top: 0;
        }
        @media (max-width: 474px) {
         margin: 0 19px 0 17px;
-        padding-top: 5px;
       }
-      @media (max-width: 330px) {
-        padding-top: 15px;
-      }
+  }
+  .bg {
+    @media (max-width: 769px) {
+     height: 33%;
+     }
   }
   &__column {
     display: flex;
@@ -52,6 +53,14 @@
     @media (max-width: 769px) {
       flex-direction: column; 
       align-items: center;
+      &:last-child {
+        display: none;
+      }
+      &:nth-child(2) {
+        .projects__item:last-child {
+          display: none;
+        }
+      }
     }
   }
   &__item {
@@ -83,14 +92,20 @@
       margin-bottom: 30px;
       height: auto;
       margin-right: 0;
+      img {
+        max-height: 200px;
+      }
     }
     @media (max-width: 474px) {
       margin-bottom: 50px;
+      img {
+        max-height: 155px;
+      }
     }
   }
   &__info {
 	position: absolute;
-	bottom: 0;
+	bottom: 0px;
   right: 0;
   width: 80%;
   box-sizing: border-box;
@@ -114,6 +129,7 @@
   @media (max-width: 769px) {
   position: relative;
   max-height: 170px;
+  bottom: 3px;
   }
   }
   &__info-block {
@@ -170,7 +186,7 @@ line-height: 14px;
   @media (max-width: 769px) {
     max-height: 56px;
     padding: 10px 19px 10px 23px;
-    }
+  }
 }
 &__btn-img {
 	background: url("../../img/icons/new-project.svg") no-repeat 50% 50%;
@@ -196,6 +212,10 @@ line-height: 14px;
   display: none;
   @media (max-width:769px) {
    display: block;
+   margin: 33px 0 50px 0;
+   .text-block__text {
+    color: #737373;
+  }
 }
 } 
 }

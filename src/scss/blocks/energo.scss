@@ -6,14 +6,17 @@
   &__bg  {
     position: absolute;
     top: 0;
-    left:30%;
+    left:31%;
     margin: 0 auto;
     z-index: 3;
+    img {
+      height: 100vh;
+    }
     @media (max-width: 1024px) {
-      left:20%;
+      left:25%;
      }
      @media (max-width: 769px) {
-      left: 10%;
+      left: 13%;
      }
     @media (max-width: 640px) {
       display: none;
@@ -30,7 +33,6 @@
      @media (max-width: 769px) {
       height: auto;
       margin: 0 52px 0 18px;
-      padding-top: 10px;
      }
      @media (max-width: 474px) {
       margin: 0 19px 0 17px;
@@ -39,19 +41,21 @@
   &__left-content {
     display: flex;
     align-items: center;
-    width: 35.7vw;
+    width: 43vw;
     position: relative;
-    padding-top: 130px;
+    padding-top: 165px;
     @media (max-width: 1260px) {
      max-width: 450px;
      }
      @media (max-width: 1024px) {
-      width: 35vw;
+      width: 45vw;
+      max-width: 55%;
      }
      @media (max-width: 769px) {
       align-items: start;
-      width: 55vw; 
+      width: 65vw; 
       padding-top: 0px;
+      max-height: 400px;
       h1 {
       word-wrap: break-word;
      }
@@ -60,7 +64,9 @@
       width: 98vw;
       max-width: 100%;
      }
-   
+     .text-block__text {
+      color: #969696;
+    }
     &:after {
       content: '';
       position: absolute;
@@ -78,35 +84,53 @@
   &__right-content {
     text-align: center;
     max-height: 500px;
-    padding-top: 80px;
+    padding-top: 100px;
+    width: 50%;
     @media (max-width: 1600px) {
     img {
       max-width: 100%;
       max-height: auto;
       object-fit: contain;
+      min-height: 550px;
+      min-width: 375px;
     }
     }
+    @media (min-width: 1024px) and (max-height: 769px) {
+      padding-top: 50px;
+      img {
+        padding-top: 80px;
+        max-height: 95%;
+      }
+   }
     @media (max-width: 1024px) {
-      margin-top: 20px;
+      margin-top: 30px;
       width: 75%;
      img {
-       width: 86%;
-       max-width: auto;
-       min-width: 375px;
+       padding-top: 30px;
+       max-width: 100%;
+       max-height: 100%;
      }
      }   
       @media (max-width: 769px) {
       padding-top: 0px;
-      margin-top: 20px;
+      margin-top: 0px;
       width: 75%;
+      max-height: 430px;
      img {
+      padding-top: 0px; 
        width: 100%;
        max-width: auto;
        min-width: 250px;
+       min-height: 400px;
      }
      }
-     @media (max-width: 474px) {
-      margin-top: 0;
+     @media (max-width: 640px) {
+      width: 95vw;
+      margin: 0 auto;
+      img {
+         max-width: 290px;
+         min-height: 366px;
+       }
       }
   }
   &__container {
@@ -116,6 +140,11 @@
     position: relative;
     @media (max-width: 640px) {
       flex-direction: column;
+     }
+     .text-block {
+      @media (max-width: 640px) {
+        margin-bottom: 0;
+        }
      }
   }
 
@@ -131,26 +160,40 @@
   }
   &__info {
   background: rgba(255, 255, 255, 0);
-  width: 100vw;
-  justify-content: start;
+  width: 58vw;
+  justify-content: space-between;
+  padding: 0;
+  align-items: center;
   @media (max-width: 1024px) {
-    justify-content: space-between;
+    
    }
    @media (max-width: 769px) {
+     height: auto;
      .footer__text, .footer__title {
         text-align: left;
      }
-     
+     .footer__title {
+      font-size: 20px;
+      line-height: 23px;
+      margin-bottom: 16px;
    }
-   @media (max-width: 474px) {
+   }
+   @media (max-width: 640px) {
+   margin-top: 80px;
    flex-direction: column;
    align-items: flex-start;
    }
+   @media (max-width: 474px) {
+    margin-top: 0px;
+    padding: 0;
+    }
 }
 &__block {
   display: flex;
   flex-direction: row;
   margin-right: 20px;
+  max-width: 250px;
+  padding: 0;
   @media (max-width: 1260px) {
     margin-right: 10px;
    }
@@ -166,18 +209,19 @@
    }
    @media (max-width: 474px) {
     flex-direction: row;
-    width: 70vw;
+    width: 98vw;
+    max-width: 100%;
     }
   span {
 	display: block;
-  margin: 10px 10px 0 0;
+  margin: 0 25px 0 0;
   background-size: contain;
   @media (max-width: 1260px) {
     margin: 0 15px 0 0;
     min-width: 35px;
    }
    @media (max-width: 769px) {
-    margin: 5px 15px 6px 0;
+    margin: 0px 15px 6px 0;
    }
   }
   
@@ -217,8 +261,8 @@
 &__text{
 max-width: 250px;
 width: 100%;
-@media (max-width: 474px) {
- max-width:100%;
+@media (max-width: 640px) {
+ max-width:90%;
   }
 }
 }

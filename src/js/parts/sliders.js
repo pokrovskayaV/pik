@@ -3,11 +3,10 @@ let initFullPage = () => {
 		anchors: ['Home', 'Unity', 'Services', 'Projects', 'Experience', 'Energo', 'Contacts'],
     responsiveWidth: 770,
     onLeave: function(origin, destination, direction){
-      
       if(direction=="down") {
-      var slideNumber = $('.fp-section.active').index()+2;
+      var slideNumber = +$('.fp-section.active').attr('id')+1;
       } else if (direction=="up"){
-      slideNumber = $('.fp-section.active').index();
+      var slideNumber = +$('.fp-section.active').attr('id')-1;
       }
       let nextNumber = slideNumber+1;
        $('.aside__page-number._first').html(`0${slideNumber}`);
@@ -48,7 +47,7 @@ let initSliderPartners = () => {
     fade: false,
     infinite: true,
     asNavFor: '.slider-x,.slider-nav',
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 2000,
   });
  $('.slider-x').slick({
