@@ -116,8 +116,8 @@
   }
    }
    &__img {
-     position: absolute;
-     top: 0;
+    position: absolute;
+    top: 0;
     transition: opacity 1s;
     width: 1580px;
     height: auto;
@@ -135,9 +135,9 @@
   width: 1590px;
 }
 }
-&__heating {
-  height: 100%;
+&__heating {  
   img {
+  height: 100%;
   left: -100%;
   }
 }
