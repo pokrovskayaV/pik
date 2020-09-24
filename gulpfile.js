@@ -27,6 +27,7 @@ let path = {
     img: sourse_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     fonts: sourse_folder + "/fonts/*.{ttf,woff,woff2}",
     libcss: sourse_folder + "/scss/lib/*.css",
+    libjs: sourse_folder + "/js/lib/*.js",
   },
   clean: "./" + project_folder + "/",
 };
@@ -127,6 +128,7 @@ function watchFiles() {
   watch(path.watch.img, buildImages);
   watch(path.watch.fonts, buildFonts);
   watch(path.watch.libcss, buildLibraryStyles);
+  watch(path.watch.libjs, buildLibraryScripts);
 }
 
 exports.default = series(

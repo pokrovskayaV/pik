@@ -1,6 +1,6 @@
 aside.aside
   .aside__burger
-   a(href="#menu-popup" class="menu__popap")
+   a(href="#menu-popup" class="menu__popap" data-effect="mfp-move-horizontal")
     img(src="../img/icons/burger.svg")
   .aside__numbers
     span(class="aside__page-number _first") 01
@@ -9,7 +9,7 @@ aside.aside
     a(href="#")
       img(src="../img/icons/arrows-grey.svg")
 
-  .menu(id="menu-popup" class="white-popup mfp-hide")
+  .menu(id="menu-popup" class="white-popup mfp-with-anim mfp-hide" data-effect="mfp-move-horizontal")
     .menu__logo.logo
       img(src="../img/logo-black.png")
     button(title="Close (Esc)" type="button" class="mfp-close") 

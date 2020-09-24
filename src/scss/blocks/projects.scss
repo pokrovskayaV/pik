@@ -5,7 +5,7 @@
     display: flex;
     flex: 1 0 auto;
     margin: 0 170px;
-    padding-top: 170px;
+    padding-top: 17.5vh;
     &::before {
       content: '';
       position: absolute;
@@ -67,7 +67,8 @@
     flex: 1 1 auto;
     max-width: 526.5px;
     width: 100%;
-    height: auto;
+    max-height: 305px;
+    height: 50%;
     position: relative;
     overflow: hidden;
     img {
@@ -89,6 +90,7 @@
     @media (max-width: 769px) {
       width: 100%;
       max-width: 528px;
+      max-height: 100%;
       margin-bottom: 30px;
       height: auto;
       margin-right: 0;
@@ -117,7 +119,9 @@
   transform: translateY(100%);
   @media (max-width: 1600px) {
     width: 100%;
-    height: 180px;
+  }
+  @media (max-height: 700px) {
+    max-height: 95%;
   }
   @media (max-width: 1260px) {
     flex-direction: column;
