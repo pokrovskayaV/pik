@@ -1,3 +1,3 @@
 # pik
 
-Хостинг: https://pokrovskayav.github.io/pik.html
+Хостинг: https://pik-dv.ru/
